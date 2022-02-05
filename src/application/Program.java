@@ -10,12 +10,12 @@ public class Program {
 	
 		Scanner sc = new Scanner(System.in);
 		
-		PrintService ps = new PrintService();
+		PrintService<String> ps = new PrintService();
 		
 		System.out.print("How many Values? ");
 		int n = sc.nextInt();
 		
-		ps.addValue("Maria");
+
 		
 		for (int i = 0; i < n; i++) {
 			String value = sc.next();
@@ -23,7 +23,7 @@ public class Program {
 		}
 		
 		ps.print();
-		Integer x = (Integer)ps.first();
+		String x = ps.first();
 		System.out.println("First: " + x );
 		
 		sc.close();
